@@ -1,0 +1,48 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "taxi-insights"
+version = "1.0.0"
+description = "DuckDB SQL and Plotly analysis of NYC TLC yellow taxi trips for 2024."
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "duckdb==1.5.6",
+    "kaleido==1.5.0",
+    "pandas==3.0.6",
+    "plotly==7.1.0",
+    "pyarrow==26.0.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "ipykernel==7.4.0",
+    "nbclient==0.11.0",
+    "nbformat==5.11.1",
+    "pytest==9.1.1",
+    "ruff==0.17.0",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+src = ["src", "tests"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM"]
+
+[tool.ruff.lint.per-file-ignores]
+"src/taxi_insights/dashboard.py" = ["E501"]
+"src/taxi_insights/insights.py" = ["E501"]
+
+[tool.ruff.format]
+quote-style = "double"
