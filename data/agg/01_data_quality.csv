@@ -1,0 +1,10 @@
+check_name,description,flagged,total_rows,flag_rate,severity_rank,share_of_flags
+missing_airport_fee,Airport_fee is null,4091232,41169720,0.09937478321445956,1,0.1563682130737205
+missing_congestion_surcharge,congestion_surcharge is null,4091232,41169720,0.09937478321445956,2,0.1563682130737205
+missing_passenger_count,passenger_count is null,4091232,41169720,0.09937478321445956,3,0.1563682130737205
+missing_rate_code,RatecodeID is null,4091232,41169720,0.09937478321445956,4,0.1563682130737205
+payment_not_reported,payment_type is 0 or null,4091232,41169720,0.09937478321445956,5,0.1563682130737205
+vendor_fields_missing,payment_type is 0 and passenger_count and RatecodeID are null,4091232,41169720,0.09937478321445956,6,0.1563682130737205
+excluded_from_analysis,Row fails the in-policy filters in sql/00_population.sql,1494442,41169720,0.03629954247927846,7,0.05711805761255217
+unknown_pickup_zone,Pickup zone is missing or the TLC Unknown zone,122200,41169720,0.002968200901050578,8,0.004670523606974292
+pickup_outside_2024,Pickup timestamp is outside calendar year 2024,56,41169720,1.360222998844782e-06,9,2.140338150495584e-06

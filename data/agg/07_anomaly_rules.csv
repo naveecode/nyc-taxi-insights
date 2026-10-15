@@ -1,0 +1,11 @@
+rule,description,flagged,total_rows,flag_rate,severity_rank,share_of_flags
+nonpositive_distance,Distance is zero or negative,776305,41169720,0.01885621276996783,1,0.28063747641185444
+nonpositive_fare,Fare is zero or negative,748284,41169720,0.018175591186920872,2,0.27050776872410726
+negative_total,Total amount is negative,609344,41169720,0.014800780768001337,3,0.22028038261598862
+passenger_out_of_range,Passenger count is outside 1-6,401638,41169720,0.009755665085893225,4,0.1451938023729132
+jfk_flat_off_manhattan,JFK flat fare (RatecodeID 2) is not a JFK-Manhattan trip,127156,41169720,0.003088580636448341,5,0.045967421246321694
+tip_exceeds_fare,Tip is larger than the fare on a positive fare,51333,41169720,0.0012468629857089143,6,0.018557092349849254
+duration_over_3h,Duration is longer than three hours,25349,41169720,0.0006157195142449354,7,0.009163768608425939
+time_inverted,Dropoff is at or before pickup,13510,41169720,0.00032815379847130364,8,0.004883921018574083
+speed_over_80,Implied speed is over 80 mph,13245,41169720,0.0003217170289231989,9,0.0047881224197641545
+pickup_outside_2024,Pickup timestamp is outside calendar year 2024,56,41169720,1.360222998844782e-06,10,2.024423220134335e-05
