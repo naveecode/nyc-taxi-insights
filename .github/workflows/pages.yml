@@ -23,6 +23,10 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: actions/configure-pages@v5
+        with:
+          # Turn Pages on before deploy. Without this, deploy-pages fails
+          # on a repository that has never had a Pages site.
+          enablement: true
       - uses: actions/upload-pages-artifact@v3
         with:
           path: site
